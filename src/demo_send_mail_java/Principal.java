@@ -149,7 +149,7 @@ public class Principal extends javax.swing.JFrame {
         String ToEmail=txtToMail.getText();
         String FromEmail ="irsansfrontieres@gmail.com";
         String FromEmailPasseword="0992433338";
-        String Subject=txtSubject.getText();
+        String subject=txtSubject.getText();
         String Message=txtMessage.getText();
         
         Properties properties=new Properties();
@@ -159,8 +159,7 @@ public class Principal extends javax.swing.JFrame {
         properties.put("mail.smtp.port", "587");	
         
         // Get the Session object.
-      Session session = Session.getInstance(properties,
-         new javax.mail.Authenticator() {
+      Session session = Session.getInstance(properties,new javax.mail.Authenticator() {
             protected PasswordAuthentication getPasswordAuthentication() {
                return new PasswordAuthentication(FromEmail, FromEmailPasseword);
             }
@@ -170,9 +169,9 @@ public class Principal extends javax.swing.JFrame {
             MimeMessage message=new MimeMessage(session);
             message.setFrom(new InternetAddress(FromEmail));
             message.addRecipient(Message.RecipientType.TO, new InternetAddress(ToEmail));
-            message.setSubject(Subject);
+            message.setSubject(subject);
             message.setText(txtMessage.getText());
-            
+            Transport.send(message);
         } catch (Exception e) {
             System.out.println(""+e.getMessage());
         }
