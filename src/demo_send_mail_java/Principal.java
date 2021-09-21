@@ -7,6 +7,7 @@ package demo_send_mail_java;
 import java.util.Properties;
 import javax.mail.PasswordAuthentication;
 import javax.mail.Session;
+import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
 
@@ -166,8 +167,11 @@ public class Principal extends javax.swing.JFrame {
       
         try {
             MimeMessage message=new MimeMessage(session);
+            message.setFrom(new InternetAddress(FromEmail));
+            message.addRecipient(Message.RecipientType.TO, new InternetAddress(ToEmail));
             
         } catch (Exception e) {
+            System.out.println(""+e.getMessage());
         }
         
     }//GEN-LAST:event_jButton1ActionPerformed
