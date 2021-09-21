@@ -6,6 +6,7 @@
 package demo_send_mail_java;
 
 import java.util.Properties;
+import javax.mail.Message;
 import javax.mail.MessagingException;
 import javax.mail.PasswordAuthentication;
 import javax.mail.Session;
@@ -153,7 +154,7 @@ public class Principal extends javax.swing.JFrame {
         String FromEmail = "irsansfrontieres@gmail.com";
         String FromEmailPasseword = "0992433338";
         String subject = txtSubject.getText();
-        String Message = txtMessage.getText();
+        String msg = txtMessage.getText();
 
         for (String singleEmail :ArrEmail) {
             Properties properties = new Properties();
@@ -161,7 +162,7 @@ public class Principal extends javax.swing.JFrame {
             properties.put("mail.smtp.starttls.enable", "true");
             properties.put("mail.smtp.host", "smtp.gmail.com");
             properties.put("mail.smtp.port", "587");
-
+            
             // Get the Session object.
             Session session = Session.getInstance ( properties, new javax.mail.Authenticator() {
                 protected PasswordAuthentication getPasswordAuthentication() {
@@ -172,9 +173,9 @@ public class Principal extends javax.swing.JFrame {
             try {
                 MimeMessage message = new MimeMessage(session);
                 message.setFrom(new InternetAddress(FromEmail));
-                message.setRecipients(Message.R.CC, InternetAddress.parse(singleEmail));
+                message.setRecipient(Message.RecipientType.TO, new InternetAddress(singleEmail));
                 message.setSubject(subject);
-                message.setText(txtMessage.getText());
+                message.setText(msg);
                 Transport.send(message);
             } catch (MessagingException e) {
                 throw new RuntimeException(e);
