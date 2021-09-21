@@ -5,6 +5,9 @@
  */
 package demo_send_mail_java;
 import java.util.Properties;
+import javax.mail.Session;
+
+
 /**
  *
  * @author Ulb-Kalema
