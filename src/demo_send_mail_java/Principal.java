@@ -5,6 +5,7 @@
  */
 package demo_send_mail_java;
 import java.util.Properties;
+import javax.mail.PasswordAuthentication;
 import javax.mail.Session;
 
 
@@ -144,6 +145,7 @@ public class Principal extends javax.swing.JFrame {
         // TODO add your handling code here:
         String ToEmail=txtToMail.getText();
         String FromEmail ="irsansfrontieres@gmail.com";
+        String FromEmailPasseword="0992433338";
         String Subject=txtSubject.getText();
         String Message=txtMessage.getText();
         
@@ -152,6 +154,14 @@ public class Principal extends javax.swing.JFrame {
         properties.put("mail.smtp.starttls.enable", "true");
         properties.put("mail.smtp.host", "smtp.gmail.com");
         properties.put("mail.smtp.port", "587");	
+        
+        // Get the Session object.
+      Session session = Session.getInstance(properties,
+         new javax.mail.Authenticator() {
+            protected PasswordAuthentication getPasswordAuthentication() {
+               return new PasswordAuthentication(FromEmail, FromEmailPasseword);
+            }
+         });
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
