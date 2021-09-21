@@ -143,6 +143,8 @@ public class Principal extends javax.swing.JFrame {
         String FromEmail ="irsansfrontieres@gmail.com";
         String Subject=txtSubject.getText();
         String Message=txtMessage.getText();
+        
+        Properties properties=new Properties();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
