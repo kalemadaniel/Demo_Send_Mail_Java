@@ -53,6 +53,7 @@ public class Principal extends javax.swing.JFrame {
 
         jLabel5.setText("Message");
 
+        jTextField1.setText("irsansfrontieres@gmail.com");
         jTextField1.setToolTipText("");
 
         jTextField2.setToolTipText("");

@@ -133,6 +133,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="jTextField1">
       <Properties>
+        <Property name="text" type="java.lang.String" value="irsansfrontieres@gmail.com"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
     </Component>
