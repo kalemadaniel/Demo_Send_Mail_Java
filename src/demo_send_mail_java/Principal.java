@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package demo_send_mail_java;
+
 import java.util.Properties;
 import java.util.stream.Collectors;
 import javax.mail.PasswordAuthentication;
@@ -11,7 +12,6 @@ import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
-
 
 /**
  *
@@ -147,37 +147,39 @@ public class Principal extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        String ToEmail=txtToMail.getText();
-        String []ArrEmail=ToEmail.split(",");
-        String FromEmail ="irsansfrontieres@gmail.com";
-        String FromEmailPasseword="0992433338";
-        String subject=txtSubject.getText();
-        String Message=txtMessage.getText();
-        
-        Properties properties=new Properties();
-        properties.put("mail.smtp.auth", "true");
-        properties.put("mail.smtp.starttls.enable", "true");
-        properties.put("mail.smtp.host", "smtp.gmail.com");
-        properties.put("mail.smtp.port", "587");	
-        
-        // Get the Session object.
-      Session session = Session.getInstance(properties,new javax.mail.Authenticator() {
-            protected PasswordAuthentication getPasswordAuthentication() {
-               return new PasswordAuthentication(FromEmail, FromEmailPasseword);
+        String ToEmail = txtToMail.getText();
+        String[] ArrEmail = ToEmail.split(",");
+        String FromEmail = "irsansfrontieres@gmail.com";
+        String FromEmailPasseword = "0992433338";
+        String subject = txtSubject.getText();
+        String Message = txtMessage.getText();
+
+        for (String singleEmail :ArrEmail) {
+            Properties properties = new Properties();
+            properties.put("mail.smtp.auth", "true");
+            properties.put("mail.smtp.starttls.enable", "true");
+            properties.put("mail.smtp.host", "smtp.gmail.com");
+            properties.put("mail.smtp.port", "587");
+
+            // Get the Session object.
+            Session session = Session.getInstance(properties, new javax.mail.Authenticator() {
+                protected PasswordAuthentication getPasswordAuthentication() {
+                    return new PasswordAuthentication(FromEmail, FromEmailPasseword);
+                }
+            });
+
+            try {
+                MimeMessage message = new MimeMessage(session);
+                message.setFrom(new InternetAddress(FromEmail));
+                message.addRecipient(Message.RecipientType.TO, new InternetAddress(singleEmail));
+                message.setSubject(subject);
+                message.setText(txtMessage.getText());
+                Transport.send(message);
+            } catch (Exception e) {
+                System.out.println("" + e.getMessage());
             }
-         });
-      
-        try {
-            MimeMessage message=new MimeMessage(session);
-            message.setFrom(new InternetAddress(FromEmail));
-            message.addRecipient(Message.RecipientType.TO, new InternetAddress(ToEmail));
-            message.setSubject(subject);
-            message.setText(txtMessage.getText());
-            Transport.send(message);
-        } catch (Exception e) {
-            System.out.println(""+e.getMessage());
         }
-        
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
