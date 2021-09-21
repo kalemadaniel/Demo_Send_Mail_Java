@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package demo_send_mail_java;
-
+import java.util.Properties;
 /**
  *
  * @author Ulb-Kalema
@@ -140,7 +140,7 @@ public class Principal extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         String ToEmail=txtToMail.getText();
-        String FromEmail =txtFromEmail.getText();
+        String FromEmail ="irsansfrontieres@gmail.com";
         String Subject=txtSubject.getText();
         String Message=txtMessage.getText();
     }//GEN-LAST:event_jButton1ActionPerformed
