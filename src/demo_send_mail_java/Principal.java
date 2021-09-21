@@ -7,6 +7,7 @@ package demo_send_mail_java;
 import java.util.Properties;
 import javax.mail.PasswordAuthentication;
 import javax.mail.Session;
+import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
@@ -170,6 +171,7 @@ public class Principal extends javax.swing.JFrame {
             message.setFrom(new InternetAddress(FromEmail));
             message.addRecipient(Message.RecipientType.TO, new InternetAddress(ToEmail));
             message.setSubject(Subject);
+            message.setText(txtMessage.getText());
             
         } catch (Exception e) {
             System.out.println(""+e.getMessage());
