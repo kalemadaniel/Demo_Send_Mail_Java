@@ -145,10 +145,11 @@ public class Principal extends javax.swing.JFrame {
         String Message=txtMessage.getText();
         
         Properties properties=new Properties();
-        properties.put("mail.smtp.host", "smtp.gmail.com");
-        properties.put("mail.smtp.port", "587");	
         properties.put("mail.smtp.auth", "true");
         properties.put("mail.smtp.starttls.enable", "true");
+        properties.put("mail.smtp.host", "smtp.gmail.com");
+        properties.put("mail.smtp.port", "587");	
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
