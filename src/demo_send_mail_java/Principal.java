@@ -36,7 +36,7 @@ public class Principal extends javax.swing.JFrame {
         txtToMail = new javax.swing.JTextField();
         txtSubject = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        txtMessage = new javax.swing.JTextArea();
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -60,9 +60,9 @@ public class Principal extends javax.swing.JFrame {
 
         txtSubject.setToolTipText("");
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        txtMessage.setColumns(20);
+        txtMessage.setRows(5);
+        jScrollPane1.setViewportView(txtMessage);
 
         jButton1.setText("Send");
 
@@ -175,8 +175,8 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField txtFromEmail;
+    private javax.swing.JTextArea txtMessage;
     private javax.swing.JTextField txtSubject;
     private javax.swing.JTextField txtToMail;
     // End of variables declaration//GEN-END:variables
