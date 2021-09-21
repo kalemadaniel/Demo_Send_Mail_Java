@@ -169,6 +169,7 @@ public class Principal extends javax.swing.JFrame {
             MimeMessage message=new MimeMessage(session);
             message.setFrom(new InternetAddress(FromEmail));
             message.addRecipient(Message.RecipientType.TO, new InternetAddress(ToEmail));
+            message.setSubject(Subject);
             
         } catch (Exception e) {
             System.out.println(""+e.getMessage());
