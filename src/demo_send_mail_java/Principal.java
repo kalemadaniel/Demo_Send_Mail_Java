@@ -7,6 +7,7 @@ package demo_send_mail_java;
 import java.util.Properties;
 import javax.mail.PasswordAuthentication;
 import javax.mail.Session;
+import javax.mail.internet.MimeMessage;
 
 
 /**
@@ -162,6 +163,12 @@ public class Principal extends javax.swing.JFrame {
                return new PasswordAuthentication(FromEmail, FromEmailPasseword);
             }
          });
+      
+        try {
+            MimeMessage message=new MimeMessage(session);
+            
+        } catch (Exception e) {
+        }
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
