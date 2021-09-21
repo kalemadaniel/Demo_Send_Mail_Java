@@ -5,6 +5,7 @@
  */
 package demo_send_mail_java;
 import java.util.Properties;
+import java.util.stream.Collectors;
 import javax.mail.PasswordAuthentication;
 import javax.mail.Session;
 import javax.mail.Transport;
@@ -147,6 +148,7 @@ public class Principal extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         String ToEmail=txtToMail.getText();
+        String []ArrEmail=ToEmail.split(",");
         String FromEmail ="irsansfrontieres@gmail.com";
         String FromEmailPasseword="0992433338";
         String subject=txtSubject.getText();
