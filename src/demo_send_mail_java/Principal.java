@@ -6,7 +6,6 @@
 package demo_send_mail_java;
 
 import java.util.Properties;
-import java.util.stream.Collectors;
 import javax.mail.PasswordAuthentication;
 import javax.mail.Session;
 import javax.mail.Transport;
@@ -171,13 +170,15 @@ public class Principal extends javax.swing.JFrame {
             try {
                 MimeMessage message = new MimeMessage(session);
                 message.setFrom(new InternetAddress(FromEmail));
-                message.addRecipient(Message.RecipientType.TO, new InternetAddress(singleEmail));
+                message.addRecipient(Message.RecipientType.TO, "");
                 message.setSubject(subject);
                 message.setText(txtMessage.getText());
                 Transport.send(message);
-            } catch (Exception e) {
-                System.out.println("" + e.getMessage());
+            } catch (Exception ex) {
+                System.out.print(""+ex);
             }
+                
+            
         }
 
     }//GEN-LAST:event_jButton1ActionPerformed
