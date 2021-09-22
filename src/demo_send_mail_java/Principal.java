@@ -151,7 +151,7 @@ public class Principal extends javax.swing.JFrame {
         // TODO add your handling code here:
         String ToEmail = txtToMail.getText();
         String[] ArrEmail = ToEmail.split(",");
-        String FromEmail = "irsansfrontieres@gmail.com";
+        String FromEmail = "kalemadaniel2014@gmail.com";
         String FromEmailPasseword = "0992433338";
         String subject = txtSubject.getText();
         String msg = txtMessage.getText();
@@ -180,8 +180,6 @@ public class Principal extends javax.swing.JFrame {
             } catch (MessagingException e) {
                 throw new RuntimeException(e);
             }
-                
-            
         }
 
     }//GEN-LAST:event_jButton1ActionPerformed
