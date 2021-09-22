@@ -133,12 +133,13 @@
     </Component>
     <Component class="javax.swing.JTextField" name="txtFromEmail">
       <Properties>
-        <Property name="text" type="java.lang.String" value="irsansfrontieres@gmail.com"/>
+        <Property name="text" type="java.lang.String" value="kalemadaniel2014@gmail.com"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtToMail">
       <Properties>
+        <Property name="text" type="java.lang.String" value="irsansfrontieres@gmail.com"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
     </Component>
