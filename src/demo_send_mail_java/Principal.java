@@ -66,7 +66,7 @@ public class Principal extends javax.swing.JFrame {
         txtFromEmail.setText("kalemadaniel2014@gmail.com");
         txtFromEmail.setToolTipText("");
 
-        txtToMail.setText("irsansfrontieres@gmail.com");
+        txtToMail.setText("irsansfrontieres@gmail.com,jonathan.kalema@gmail.com");
         txtToMail.setToolTipText("");
 
         txtSubject.setToolTipText("");
