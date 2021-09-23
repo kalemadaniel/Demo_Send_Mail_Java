@@ -15,6 +15,7 @@ import java.awt.event.ActionListener;
 import java.io.File;
 import java.util.Properties;
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
@@ -30,7 +31,7 @@ import javax.swing.UIManager;
  *
  * @author Ulb-Kalema
  */
-public class SwingEmailSender JFrame {
+public class SwingEmailSender extends JFrame {
 	private ConfigUtility configUtil = new ConfigUtility();
 	
 	private JMenuBar menuBar = new JMenuBar();
@@ -78,7 +79,7 @@ public class SwingEmailSender JFrame {
 		
 		menuFile.add(menuItemSetting);
 		menuBar.add(menuFile);
-		setJMenuBar(menuBar);		
+		//setJMenuBar(menuBar);		
 	}
 	
 	private void setupForm() {
@@ -146,11 +147,11 @@ public class SwingEmailSender JFrame {
 			Properties smtpProperties = configUtil.loadProperties();
 			EmailUtility.sendEmail(smtpProperties, toAddress, subject, message, attachFiles);
 			
-			JOptionPane.showMessageDialog(this, 
+			JOptionPane.showMessageDialog(null, 
 					"The e-mail has been sent successfully!");
 			
 		} catch (Exception ex) {
-			JOptionPane.showMessageDialog(this, 
+			JOptionPane.showMessageDialog(null, 
 					"Error while sending the e-mail: " + ex.getMessage(),
 					"Error", JOptionPane.ERROR_MESSAGE);
 		}
@@ -158,7 +159,7 @@ public class SwingEmailSender JFrame {
 	
 	private boolean validateFields() {
 		if (fieldTo.getText().equals("")) {
-			JOptionPane.showMessageDialog(this, 
+			JOptionPane.showMessageDialog(null, 
 					"Please enter To address!",
 					"Error", JOptionPane.ERROR_MESSAGE);
 			fieldTo.requestFocus();
@@ -166,7 +167,7 @@ public class SwingEmailSender JFrame {
 		}
 		
 		if (fieldSubject.getText().equals("")) {
-			JOptionPane.showMessageDialog(this, 
+			JOptionPane.showMessageDialog(null, 
 					"Please enter subject!",
 					"Error", JOptionPane.ERROR_MESSAGE);
 			fieldSubject.requestFocus();
@@ -174,7 +175,7 @@ public class SwingEmailSender JFrame {
 		}
 		
 		if (textAreaMessage.getText().equals("")) {
-			JOptionPane.showMessageDialog(this, 
+			JOptionPane.showMessageDialog(null, 
 					"Please enter message!",
 					"Error", JOptionPane.ERROR_MESSAGE);
 			textAreaMessage.requestFocus();
