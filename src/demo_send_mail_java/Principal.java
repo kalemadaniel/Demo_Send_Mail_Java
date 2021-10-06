@@ -5,6 +5,7 @@
  */
 package demo_send_mail_java;
 
+import java.io.File;
 import java.util.Properties;
 import javax.mail.Message;
 import javax.mail.MessagingException;
@@ -13,6 +14,10 @@ import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+import javax.swing.ImageIcon;
+import javax.swing.JFileChooser;
+import javax.swing.JLabel;
+import javax.swing.filechooser.FileNameExtensionFilter;
 
 
 /**
@@ -52,8 +57,8 @@ public class Principal extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -76,19 +81,19 @@ public class Principal extends javax.swing.JFrame {
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 89, 26));
 
         txtFromEmail.setToolTipText("");
-        getContentPane().add(txtFromEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 160, 406, -1));
+        getContentPane().add(txtFromEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 154, 406, 30));
 
         txtToMail.setToolTipText("");
-        getContentPane().add(txtToMail, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, 406, -1));
+        getContentPane().add(txtToMail, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 114, 406, 30));
 
         txtSubject.setToolTipText("");
-        getContentPane().add(txtSubject, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 200, 406, -1));
+        getContentPane().add(txtSubject, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 194, 406, 30));
 
         txtMessage.setColumns(20);
         txtMessage.setRows(5);
         jScrollPane1.setViewportView(txtMessage);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 240, 406, 164));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 234, 406, 170));
 
         jButton1.setText("Send");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -102,6 +107,11 @@ public class Principal extends javax.swing.JFrame {
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 110, 210, 260));
 
         jButton2.setText("...");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 370, 40, -1));
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 0));
@@ -112,15 +122,23 @@ public class Principal extends javax.swing.JFrame {
         jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 51, 0), 2));
         jPanel3.setToolTipText("");
 
+        jLabel7.setText("jLabel7");
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 796, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap(590, Short.MAX_VALUE)
+                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 406, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap(288, Short.MAX_VALUE)
+                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(88, 88, 88))
         );
 
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 800, 410));
@@ -128,10 +146,6 @@ public class Principal extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(250, 250, 250));
         jPanel2.setToolTipText("");
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel7.setText("jLabel7");
-        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 300, 200, 30));
-
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 840, 440));
 
         pack();
@@ -174,6 +188,27 @@ public class Principal extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    
+    public void choix_photo(JLabel photo) {
+        JFileChooser fileChooser = new JFileChooser();
+        fileChooser.setCurrentDirectory(new File(System.getProperty("user.home")));
+        filter = new FileNameExtensionFilter("*.IMAGE", "jpg", "gif", "png");
+        fileChooser.addChoosableFileFilter(filter);
+        int result = fileChooser.showSaveDialog(null);
+        if (result == JFileChooser.APPROVE_OPTION) {
+            File selectedFile = fileChooser.getSelectedFile();
+            String path = selectedFile.getAbsolutePath();
+            cheminPhoto = path;
+            ImageIcon imgIcon = new ImageIcon(fileChooser.getSelectedFile().getAbsolutePath());
+            java.awt.Image img = imgIcon.getImage().getScaledInstance(photo.getWidth(), photo.getHeight(), java.awt.Image.SCALE_DEFAULT);
+            ImageIcon imgIco = new ImageIcon(img);
+            photo.setIcon(imgIco);
+        }
+    }
     /**
      * @param args the command line arguments
      */
