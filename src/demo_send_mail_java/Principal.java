@@ -58,33 +58,31 @@ public class Principal extends javax.swing.JFrame {
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 6, 615, 64));
 
         jLabel2.setText("From");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 138, 89, 25));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 89, 25));
 
         jLabel3.setText("To");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(101, 98, 89, 25));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 89, 25));
 
         jLabel4.setText("Subject");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 175, 89, 26));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, 89, 26));
 
         jLabel5.setText("Message");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 213, 89, 26));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 89, 26));
 
-        txtFromEmail.setText("kalemadaniel2014@gmail.com");
         txtFromEmail.setToolTipText("");
-        getContentPane().add(txtFromEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(195, 138, 406, -1));
+        getContentPane().add(txtFromEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 160, 406, -1));
 
-        txtToMail.setText("irsansfrontieres@gmail.com,jonathan.kalema@gmail.com");
         txtToMail.setToolTipText("");
-        getContentPane().add(txtToMail, new org.netbeans.lib.awtextra.AbsoluteConstraints(195, 102, 406, -1));
+        getContentPane().add(txtToMail, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, 406, -1));
 
         txtSubject.setToolTipText("");
-        getContentPane().add(txtSubject, new org.netbeans.lib.awtextra.AbsoluteConstraints(195, 176, 406, -1));
+        getContentPane().add(txtSubject, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 200, 406, -1));
 
         txtMessage.setColumns(20);
         txtMessage.setRows(5);
         jScrollPane1.setViewportView(txtMessage);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(195, 213, 406, 164));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 240, 406, 164));
 
         jButton1.setText("Send");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -92,7 +90,7 @@ public class Principal extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(542, 395, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 420, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
