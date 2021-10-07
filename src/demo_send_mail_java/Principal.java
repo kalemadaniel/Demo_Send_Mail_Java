@@ -47,11 +47,6 @@ public class Principal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        txtToMail = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
@@ -64,26 +59,15 @@ public class Principal extends javax.swing.JFrame {
         txtSubject = new javax.swing.JTextField();
         txtFromEmail = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
+        txtToMail = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel2.setText("From");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 89, 25));
-
-        jLabel3.setText("To");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 89, 25));
-
-        jLabel4.setText("Subject");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, 89, 26));
-
-        jLabel5.setText("Message");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 89, 26));
-
-        txtToMail.setFont(new java.awt.Font("Courier New", 0, 18)); // NOI18N
-        txtToMail.setToolTipText("");
-        getContentPane().add(txtToMail, new org.netbeans.lib.awtextra.AbsoluteConstraints(96, 114, 430, 40));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/pdf.png"))); // NOI18N
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 110, 210, 260));
@@ -99,11 +83,11 @@ public class Principal extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(103, 103, 0));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Courier New", 0, 48)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Courier New", 1, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Sending mail in java");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, 610, 64));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, 590, 64));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/email.png"))); // NOI18N
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 110, 80));
@@ -136,7 +120,7 @@ public class Principal extends javax.swing.JFrame {
                 txtFromEmailActionPerformed(evt);
             }
         });
-        jPanel3.add(txtFromEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(76, 80, 430, 40));
+        jPanel3.add(txtFromEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, 430, 40));
 
         jButton1.setFont(new java.awt.Font("Courier New", 0, 14)); // NOI18N
         jButton1.setText("Send");
@@ -146,6 +130,22 @@ public class Principal extends javax.swing.JFrame {
             }
         });
         jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 360, 100, 30));
+
+        txtToMail.setFont(new java.awt.Font("Courier New", 0, 18)); // NOI18N
+        txtToMail.setToolTipText("");
+        jPanel3.add(txtToMail, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, 430, 40));
+
+        jLabel3.setText("To");
+        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 70, 40));
+
+        jLabel2.setText("From");
+        jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 35, 70, 30));
+
+        jLabel5.setText("Message");
+        jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, 70, 26));
+
+        jLabel4.setText("Subject");
+        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 136, 60, 30));
 
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 800, 400));
 
