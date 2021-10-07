@@ -52,17 +52,18 @@ public class Principal extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         txtToMail = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         lbl_chemin = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         txtMessage = new javax.swing.JTextArea();
         txtSubject = new javax.swing.JTextField();
         txtFromEmail = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -84,15 +85,6 @@ public class Principal extends javax.swing.JFrame {
         txtToMail.setToolTipText("");
         getContentPane().add(txtToMail, new org.netbeans.lib.awtextra.AbsoluteConstraints(96, 114, 430, 40));
 
-        jButton1.setFont(new java.awt.Font("Courier New", 0, 14)); // NOI18N
-        jButton1.setText("Send");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(429, 440, 100, 30));
-
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/pdf.png"))); // NOI18N
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 110, 210, 260));
 
@@ -111,9 +103,12 @@ public class Principal extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Sending mail in java");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 0, 610, 64));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, 610, 64));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 840, 70));
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/email.png"))); // NOI18N
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 110, 80));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 840, 80));
 
         jPanel3.setBackground(new java.awt.Color(245, 245, 245));
         jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 51, 0), 2));
@@ -121,7 +116,7 @@ public class Principal extends javax.swing.JFrame {
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lbl_chemin.setFont(new java.awt.Font("Courier New", 0, 14)); // NOI18N
-        jPanel3.add(lbl_chemin, new org.netbeans.lib.awtextra.AbsoluteConstraints(592, 290, 200, 30));
+        jPanel3.add(lbl_chemin, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 280, 200, 30));
 
         txtMessage.setColumns(20);
         txtMessage.setFont(new java.awt.Font("Courier New", 0, 18)); // NOI18N
@@ -143,7 +138,16 @@ public class Principal extends javax.swing.JFrame {
         });
         jPanel3.add(txtFromEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(76, 80, 430, 40));
 
-        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 800, 410));
+        jButton1.setFont(new java.awt.Font("Courier New", 0, 14)); // NOI18N
+        jButton1.setText("Send");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 360, 100, 30));
+
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 800, 400));
 
         jPanel2.setBackground(new java.awt.Color(250, 250, 250));
         jPanel2.setToolTipText("");
@@ -256,6 +260,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
