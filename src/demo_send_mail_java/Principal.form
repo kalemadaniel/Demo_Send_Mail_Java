@@ -139,7 +139,7 @@
           </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="76" y="180" width="430" height="170"/>
+              <AbsoluteConstraints x="80" y="180" width="430" height="170"/>
             </Constraint>
           </Constraints>
 
@@ -152,7 +152,14 @@
                   <Font name="Courier New" size="18" style="0"/>
                 </Property>
                 <Property name="rows" type="int" value="5"/>
+                <Property name="text" type="java.lang.String" value="Bonjour , Veuillez trouver ci-joint la notre bon de Commande N&#xb0;CMD-002. Nous restons &#xe0; votre &#xe9;coute pour toute pr&#xe9;occupation. Dans l?attente de votre confirmation. Veuillez agr&#xe9;er, toute notre consid&#xe9;ration.&#xa;"/>
+                <Property name="autoscrolls" type="boolean" value="false"/>
               </Properties>
+              <AccessibilityProperties>
+                <Property name="AccessibleContext.accessibleParent" type="javax.accessibility.Accessible" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                  <ComponentRef name="jPanel2"/>
+                </Property>
+              </AccessibilityProperties>
             </Component>
           </SubComponents>
         </Container>

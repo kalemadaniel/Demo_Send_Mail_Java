@@ -35,6 +35,7 @@ public class Principal extends javax.swing.JFrame {
         txtFromEmail.setText("jnthnkalema@gmail.com");
         txtToMail.setText("kalemadaniel2014@gmail.com");
         txtSubject.setText("Bon de commande n°00675");
+        this.setTitle("Sending mail in java");
     }
 
     /**
@@ -105,9 +106,12 @@ public class Principal extends javax.swing.JFrame {
         txtMessage.setColumns(20);
         txtMessage.setFont(new java.awt.Font("Courier New", 0, 18)); // NOI18N
         txtMessage.setRows(5);
+        txtMessage.setText("Bonjour , Veuillez trouver ci-joint la notre bon de Commande N°CMD-002. Nous restons à votre écoute pour toute préoccupation. Dans l?attente de votre confirmation. Veuillez agréer, toute notre considération.\n");
+        txtMessage.setAutoscrolls(false);
         jScrollPane1.setViewportView(txtMessage);
+        txtMessage.getAccessibleContext().setAccessibleParent(jPanel2);
 
-        jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(76, 180, 430, 170));
+        jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 180, 430, 170));
 
         txtSubject.setFont(new java.awt.Font("Courier New", 0, 18)); // NOI18N
         txtSubject.setToolTipText("");
@@ -165,8 +169,8 @@ public class Principal extends javax.swing.JFrame {
         // TODO add your handling code here:
         String ToEmail = txtToMail.getText();
         String[] ArrEmail = ToEmail.split(",");
-        String FromEmail = "kalemadaniel2014@gmail.com";
-        String FromEmailPasseword = "0992433338";
+        String FromEmail = txtFromEmail.getText();
+        String FromEmailPasseword = "4834y84389893";
         String subject = txtSubject.getText();
         String msg = txtMessage.getText();
 
