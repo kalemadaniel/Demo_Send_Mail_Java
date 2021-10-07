@@ -135,15 +135,19 @@ public class Principal extends javax.swing.JFrame {
         txtToMail.setToolTipText("");
         jPanel3.add(txtToMail, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, 430, 40));
 
+        jLabel3.setFont(new java.awt.Font("Courier New", 0, 14)); // NOI18N
         jLabel3.setText("To");
         jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 70, 40));
 
+        jLabel2.setFont(new java.awt.Font("Courier New", 0, 14)); // NOI18N
         jLabel2.setText("From");
         jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 35, 70, 30));
 
+        jLabel5.setFont(new java.awt.Font("Courier New", 0, 14)); // NOI18N
         jLabel5.setText("Message");
         jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, 70, 26));
 
+        jLabel4.setFont(new java.awt.Font("Courier New", 0, 14)); // NOI18N
         jLabel4.setText("Subject");
         jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 136, 60, 30));
 
