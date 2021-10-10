@@ -20,7 +20,7 @@ Les étapes pour installer le programme sont :
 2. **Importer le projet**
 3. **Changer les paramètres de connexion**
 4. **Executer le projet**
-5. Cliquez pour activer l’option.
+5. Aller dans la boîte mail Gmail puis cliquez pour activer l’option.
 6. Vous devez configurer les paramètres de sécurité de GMAIL, en visitant le lien suivant https://myaccount.google.com/security
 
 Défiler la page vers le bas jusqu’à ce que vous trouver Accès moins sécurisé des applications, puis cliquez sur Activer l’accès comme montrer dans l’image ci-dessous:
